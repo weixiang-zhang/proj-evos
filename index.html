@@ -165,10 +165,10 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">📌 Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose <b>EVOlutionary Selector (EVOS)</b>, an efficient training paradigm for accelerating Implicit Neural Representation (INR). Unlike conventional INR training that feeds all samples through the neural network in each iteration, our approach restricts training to <b>strategically selected points</b>, reducing computational overhead by eliminating redundant forward passes. 
+            We propose <b><u>EVOlutionary Selector (EVOS)</u></b>, an efficient training paradigm for accelerating Implicit Neural Representation (INR). Unlike conventional INR training that feeds all samples through the neural network in each iteration, our approach restricts training to <b>strategically selected points</b>, reducing computational overhead by eliminating redundant forward passes. 
             Specifically, we treat each sample as an individual in an evolutionary process, where only those fittest ones survive and merit inclusion in training, adaptively evolving with the neural network dynamics. 
             While this is conceptually similar to Evolutionary Algorithms, their distinct objectives (selection for acceleration vs. iterative solution optimization) require a fundamental redefinition of evolutionary mechanisms for our context.
             In response, we design sparse fitness evaluation, frequency-guided crossover, and augmented unbiased mutation to comprise EVOS. 
@@ -200,12 +200,24 @@
       </div>
 
       <div class="item" style="text-align: center;">
-        <img src="static/images/exp_1.png" style="width:70%; height:70%;"/>
+        <img src="static/images/visual_compare.png" style="width:60%; height:60%;"/>
         <h2 class="subtitle has-text-centered">
-          <small>We compared our method against Uniform Sampling (Uniform.), EGRA, Expansive Supervision (Expan.), Soft Mining, INT, <br>
-          and conventional full-coordinate training (Standard) commonly used in INR encoding.<br>
-          Our method demonstrates consistent superior efficiency across all comparative strategies. <br>
-          <i>Strategies without underlines employ constant scheduler, while <u>underlined strategies</u> implement step-wise scheduler.</i></small>
+          <small>
+            Visual comparison of sampling-based acceleration methods for INR training. <br>
+            Detailed examination reveals that our method particularly excels in preserving high-fidelity details, <br>
+            as evidenced by the wolf's eye and fur regions, producing results closest to ground truth.
+        </small>
+        </h2>
+      </div>
+
+      <div class="item" style="text-align: center;">
+        <img src="static/images/evos-loss.png" style="width:60%; height:60%;"/>
+        <h2 class="subtitle has-text-centered">
+          <small>
+            Comparison of reconstruction quality across different sampling-based methods over training time. <br>
+            EVOS demonstrates both faster convergence and superior performance compared to alternative approaches. <br>
+            Moreover, EVOS exhibits more stable performance gains than INT, maintaining its advantage throughout the training process.
+        </small>
         </h2>
       </div>
 
@@ -219,8 +231,8 @@
 <section class="section hero ">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">💡Insights</h2>
+      <div class="column is-four-fifths" style="border-width: 2px; border-style: solid; border-color: #235d3a; border-radius: 20px;background-color: #F1F9F2;" >
+        <h2 class="title is-3">💡 Insights</h2>
         <div class="content has-text-justified">
           <p>
             <b>Sample Weighting ALSO Benefits “Overfitting”.</b>
